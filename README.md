@@ -24,3 +24,18 @@ $$ H = \begin{pmatrix}
 \end{pmatrix} $$
 
 (it is different from conventional parity-check matrix (e.g. (https://errorcorrectionzoo.org/c/steane) ) by some permutations.
+
+The logical $$|0\rangle $$ state is defined as 
+
+$$ |0\rangle_L = \frac{1}{\sqrt{8}} \sum_{Hc=0 (\mathrm{mod} 2)} |c\rangle  $$ 
+
+and the logical $$|1\rangle$$ state is defined as 
+
+$$ |1\rangle_L = \frac{1}{\sqrt{8}} \sum_{Hc=0 (\mathrm{mod} 2)} |c \oplus 1111111\rangle  $$ 
+
+The quantum circuit for $$|0\rangle_L$$ is the following.
+
+<img src="https://github.com/user-attachments/assets/6cdc550c-7ab8-4d77-a473-c349380c3654" width = "400" height = "300" />
+
+### Apply Pauli Error Channel
+
