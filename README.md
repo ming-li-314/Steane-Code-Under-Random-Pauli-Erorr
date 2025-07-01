@@ -39,3 +39,18 @@ The quantum circuit for $$|0\rangle_L$$ is the following.
 
 ### Apply Pauli Error Channel
 
+Errors are randomly applied to each of the 7 physical qubits and the errors can be $$X, Y, Z$$ errors with probability $$p$$. 
+
+### Syndrome Measurements and Error Corrections
+
+These parts are similar to the standard Steane single error correction quantum circuit. I basically borrow the codes from the problem session. 
+
+The code measures $$X$$- and $$Z$$-stabilizers using ancilla qubits, computing syndromes based on the parity-checking matrix $$H$$. $$X$$-stabilizers detect $$Z$$ errors, and $$Z$$-stabilizers detect $$X$$ errors ($$Y=iXZ$$ errors produce both). Recovery operations apply $$X$$ or $$Z$$ gates to correct single-qubit errors based on syndrome values.
+
+### Distribution Analysis
+
+The simulation computes the probability distribution of 7-bit measurement outcomes, separating codewords (from $$p = 0$$) and non-codewords. At $$p = 0$$, only $$|0\rangle_L$$ codewords appear (each $$\sim 0.125$$ probability). As $$p$$ increases, non-codewords emerge due to uncorrectable multi-qubit errors.
+
+The Steane code corrects single-qubit errors, so at low $$p$$, the state remains in the $$|0\rangle_L$$ codespace after correction. At higher $$p$$, multi-qubit errors (weight $$\geq 2$$) cause deviations, producing non-codewords. The probability of $$|0\rangle_L$$ decreases with increasing $$p$$, reflecting the code’s error correction limits.
+
+
