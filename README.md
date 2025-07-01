@@ -53,4 +53,5 @@ The simulation computes the probability distribution of 7-bit measurement outcom
 
 The Steane code corrects single-qubit errors, so at low $$p$$, the state remains in the $$|0\rangle_L$$ codespace after correction. At higher $$p$$, multi-qubit errors (weight $$\geq 2$$) cause deviations, producing non-codewords. The probability of $$|0\rangle_L$$ decreases with increasing $$p$$, reflecting the code’s error correction limits.
 
+<img src="https://github.com/user-attachments/assets/e9983aa9-2533-48ec-9df0-f419c17f7a43" width = " 400" height = "300" />
 
