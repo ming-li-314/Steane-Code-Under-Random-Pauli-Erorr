@@ -10,3 +10,17 @@ The success probabilty, is the probabilty that you measure a component of the lo
 A pauli error channel with error probability $$p$$ means that for each qubit, an $$X$$, $$Y$$, or $$Z$$ error is applied with probability $$p$$ (thus, $$p\leq \frac{1}{3}$$ is necessary). 
 
 #### Note that multiple errors can be applied, as a result, some errors might not be corrected. This is different from standard steane's code that correct one error. 
+
+The codes contain a series of steps. 
+
+### Steane State Preparation. 
+
+The parity-check matrix we used is
+
+$$ H = \begin{pmatrix}
+1 & 0 & 0 & 1 & 0 & 1 & 1 \\
+0 & 1 & 0 & 1 & 1 & 0 & 1 \\
+0 & 0 & 1 & 0 & 1 & 1 & 1 \\
+\end{pmatrix} $$
+
+(it is different from conventional parity-check matrix (e.g. (https://errorcorrectionzoo.org/c/steane) ) by some permutations.
