@@ -11,7 +11,7 @@ A pauli error channel with error probability $$p$$ means that for each qubit, an
 
 #### Note that multiple errors can be applied, as a result, some errors might not be corrected. This is different from standard steane's code that correct one error. 
 
-The codes contain a series of steps. 
+## The Solution contains a series of steps. 
 
 ### Steane State Preparation. 
 
@@ -33,7 +33,7 @@ and the logical $$|1\rangle$$ state is defined as
 
 $$ |1\rangle_L = \frac{1}{\sqrt{8}} \sum_{Hc=0 (\mathrm{mod} 2)} |c \oplus 1111111\rangle  $$ 
 
-The quantum circuit for $$|0\rangle_L$$ is the following.
+The quantum circuit for $$|0\rangle_L$$ is the following. (A very nice pedagogical explanation of the construction can be found in the textbook "*Quantum Computing: From Linear Algebra to Physical Realizations*" by Mikio Nakahara and Tetsuo Ohmi. )
 
 <img src="https://github.com/user-attachments/assets/6cdc550c-7ab8-4d77-a473-c349380c3654" width = "400" height = "300" />
 
@@ -51,7 +51,7 @@ The code measures $$X$$- and $$Z$$-stabilizers using ancilla qubits, computing s
 
 The simulation computes the probability distribution of 7-bit measurement outcomes, separating codewords (from $$p = 0$$) and non-codewords. At $$p = 0$$, only $$|0\rangle_L$$ codewords appear (each $$\sim 0.125$$ probability). As $$p$$ increases, non-codewords emerge due to uncorrectable multi-qubit errors.
 
-The Steane code corrects single-qubit errors, so at low $$p$$, the state remains in the $$|0\rangle_L$$ codespace after correction. At higher $$p$$, multi-qubit errors (weight $$\geq 2$$) cause deviations, producing non-codewords. The probability of $$|0\rangle_L$$ decreases with increasing $$p$$, reflecting the code’s error correction limits.
+The Steane code corrects single-qubit errors, so at low $$p$$, the state remains in the $$|0\rangle_L$$ codespace after correction. At higher $$p$$, multi-qubit errors (weight $$\geq 2$$) cause deviations, producing non-codewords. The probability of $$|0\rangle_L$$ decreases with increasing $$p$$.
 
 <img src="https://github.com/user-attachments/assets/e9983aa9-2533-48ec-9df0-f419c17f7a43" width = " 400" height = "300" />
 
